@@ -1,0 +1,14 @@
+Label{
+    -fx-text-fill:#FFF;
+}
+
+.password
+{
+    -fx-font-size:20px;
+    -fx-text-fill:#FFF;
+}
+
+.lblPassword
+{
+    -fx-font-size:25px;
+}

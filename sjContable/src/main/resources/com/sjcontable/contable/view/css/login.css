@@ -1,0 +1,153 @@
+/* 
+    Created on : 23/02/2015, 02:34:51 PM
+    Author     : jlimachi
+*/
+
+.body{
+    -fx-background-image: url("../image/img_fondo.jpg");
+    -fx-background-size: 100% 100%; 
+}
+
+*{
+    -fx-background-radius: 0;
+}
+
+.hbLogin{
+    -fx-border-width: 0 0 6px 0;
+}
+.ImgIniciarSesion{
+    -fx-background-color: #F14E2B;
+    -fx-border-width: 0 0 6px 0;
+    -fx-border-color: #244166;
+}
+.apLogeo{
+    -fx-background-color: #FFFFFF;
+    -fx-border-width: 0 0 6px 0;
+    -fx-border-color: #B48205;   
+}
+.btns{
+    -fx-background-color: #B58205;
+    -fx-text-fill: #FFFFFF;
+    -fx-pref-width: 110px;  
+}
+.btnsGenerar{   
+    -fx-pref-height: 30px;
+    -fx-pref-width: 130px;  
+    -fx-font-family: "Arial";
+    -fx-font-size: 11pt;
+}
+.btns:hover{
+    -fx-cursor: hand;
+}
+.btnRestablecer{
+    -fx-padding: 0 0 0 18;
+    -fx-background-image: url("../image/ico_btn_restablecer.png"); 
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: auto;
+    -fx-background-position: 15 center;
+    -fx-pref-width: 150px; 
+}
+.btnGenerar{
+    -fx-padding: 0 0 0 17;
+    -fx-background-image: url("../image/ico_btn_generar.png"); 
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: auto;
+    -fx-background-position: 18 center;
+}
+.btnSalir{
+    -fx-padding: 0 0 0 14;
+    -fx-background-image: url("../image/ico_btn_salir.png"); 
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: auto;
+    -fx-background-position: 30 center;
+}
+.txt{
+    -fx-border-radius: 0px;
+}
+.required{
+    -fx-border-width: 0 0 2px 0;
+    -fx-border-color: #C7C7C7;  
+}
+
+.txtPass{
+    -fx-border-width: 0 0 2px 0;
+    -fx-border-color: #C7C7C7;  
+}
+
+.txtLoginTitulo{
+    -fx-font-size:33px;
+    -fx-font-family: "Arial Narrow";
+    -fx-text-fill: #FFFFFF;
+    -fx-effect:dropshadow(three-pass-box,rgba(0,0,0,0.4),15,0.6,0,0)
+}
+.apHeadGeneraUsers{
+    -fx-pref-height: 50px;
+    -fx-background-color: #AF800A;
+    -fx-background-image: url("../image/ico_miembros_mesa.png"); 
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 4%;
+    -fx-background-position: 18 6;
+    -fx-text-fill: #FFFFFF;
+}
+.lblHeadGenerarUsers{
+    -fx-text-fill: #FFFFFF;
+    //-fx-font-weight: bold;
+    -fx-font-size: 17pt;
+    -fx-font-family: "Arial Narrow";
+}
+.apDownload{
+    -fx-background-image: url("../image/img_fondo.jpg");  
+}
+
+.apPerfil{
+    -fx-background-color: #FFFFFF;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-size: 10pt;
+}
+.apPerfil1{
+    -fx-font-weight: bold;
+    -fx-font-size: 13pt;
+    -fx-background-color: #E1AE04; 
+    -fx-text-fill: #FFFFFF;      
+}
+.apPerfil2{
+    -fx-font-weight: bold;
+    -fx-font-size: 13pt;
+    -fx-background-color: #F0802A;
+    -fx-text-fill: #FFFFFF;
+}
+#APSuperiorLogin{
+    -fx-background-color: #1A1A1A;
+    -fx-background-image: url("../image/lado_Sup.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center bottom;
+    //-fx-pref-max-height: 20%;
+}
+#APInferiorLogin{
+    -fx-background-color: #1A1A1A;
+    -fx-background-image: url("../image/lado_Inf.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center top;
+    //-fx-pref-max-height: 50%;   
+}
+#lblTituloPreLogin{
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 15pt;
+    -fx-font-family: "Arial Narrow";
+}
+.textIngresoLogin{
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial Narrow";
+}
+.textSubtitleLogin{
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 21px;
+    -fx-font-family: "Arial Narrow";
+}
+.lblErrorValidacion{
+    -fx-text-fill: #F14E2B;
+    -fx-font-family: "Arial Narrow";
+}
+
+

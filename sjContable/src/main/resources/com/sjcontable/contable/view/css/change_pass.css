@@ -1,0 +1,572 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 12/04/2015, 05:49:28 PM
+    Author     : aquispec
+*/
+
+
+/* horizontal the two nodes are placed to the left/right of each other. */
+
+Button{
+    -fx-background-radius: 0;      
+}
+.split-pane:horizontal > * > .split-pane-divider {
+    -fx-border-color: transparent -fx-box-border transparent #BBBBBB;
+    -fx-background-color: transparent, -fx-inner-border-horizontal;
+    -fx-background-insets: 0, 0 1 0 1;
+}
+
+/* vertical the two nodes are placed on top of each other. */
+.split-pane:vertical > * > .split-pane-divider {
+    -fx-border-color:  #BBBBBB transparent -fx-box-border transparent;
+    -fx-background-color: transparent, -fx-inner-border;
+    -fx-background-insets: 0, 1 0 1 0;
+}
+
+.split-pane:vertical > * > .split-pane-divider {
+    -fx-border-color:  transparent;
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+}
+
+.split-pane *.vertical-grabber {
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-shape: " ";
+}
+
+TextField, PasswordField{
+    -fx-background-color: #DDE1E2;
+    -fx-font-size: 20px;
+    -fx-text-fill: #666666;
+}
+
+ScrollPane{
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+ScrollPane:focused {
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+ScrollPane .corner{
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+.scroll-pane > .viewport {
+   -fx-background-color: transparent;
+}
+.scroll-pane {
+   -fx-background-color: transparent;
+}
+
+/** CSS **/
+ScrollPane{
+    /*-fx-border-color:derive(gray,80%);*/
+}
+
+/* The main scrollbar CSS class of ListView */
+ScrollPane .scroll-bar:horizontal ,
+ScrollPane  .scroll-bar:vertical{
+    -fx-background-color:transparent;
+    -fx-text-fill: transparent;
+
+}
+
+/* The increment and decrement button CSS class of scrollbar */
+ScrollPane .increment-button ,ScrollPane .decrement-button {
+    -fx-text-fill: transparent;
+    -fx-background-color:transparent;
+    -fx-pref-width: 25px;
+    -fx-pref-height: 15px;
+}
+
+/* The main scrollbar **track** CSS class  */
+ScrollPane .scroll-bar:horizontal .track ,
+ScrollPane .scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color:derive(gray,80%);
+    -fx-background-radius: 0em;
+}
+
+/* The main scrollbar **thumb** CSS class which we drag every time (movable) */
+ScrollPane .scroll-bar:horizontal .thumb,
+ScrollPane .scroll-bar:vertical .thumb {
+    -fx-background-color:derive(black,90%);
+    -fx-background-insets: 0, 0, 0;
+    -fx-background-radius: 0em;
+
+}
+
+/* ------------------------------------------------------------------------------------- */
+/** EVENT CSS **/
+/* ------------------------------------------------------------------------------------- */
+
+/* The main scrollbar **track** CSS class on event of "hover" and "pressed" */
+
+ScrollPane .scroll-bar:horizontal:hover .track ,
+ScrollPane .scroll-bar:horizontal:pressed .track ,
+ScrollPane .scroll-bar:vertical:hover .track,
+ScrollPane .scroll-bar:vertical:pressed .track{
+    -fx-background-color: derive(#434343,20%);
+    -fx-opacity: 0.2;
+    /*-fx-background-radius: 0em;*/
+}
+
+/* The main scrollbar **thumb** CSS class on event of "hover" and "pressed" */
+ScrollPane .scroll-bar .thumb:hover,
+ScrollPane .scroll-bar .thumb:pressed{
+    -fx-background-color: derive(black,50%);
+}
+
+ScrollPane .increment-button:hover ,ScrollPane .decrement-button:hover {
+    -fx-background-color:derive(gray,100%);
+    -fx-border-color:derive(gray,80%);	
+}
+
+.background_white{
+    -fx-background-color: #FFFFFF;
+}
+.popups_in_titles{
+    -fx-font-family: "Centabel Book";
+    -fx-text-fill: #FFFFFF;
+    -fx-alignment: center;
+    -fx-font-size: 50px;
+}
+.popups_in_subtitles{
+    -fx-font-family: "Centabel Book";
+    -fx-text-fill: #FFFFFF;
+    -fx-alignment: center;
+    -fx-font-size: 25px;
+}
+.popups_in_text{
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 30px;
+}
+.popups_background{
+    -fx-background-color: transparent;
+}
+
+.popups_in_background{
+    -fx-background-color: #293E43;
+}
+.popups_in_text_error{
+    -fx-text-fill: #f56c6c;
+    -fx-font-size: 20px;
+
+}
+.top_bloker{
+    -fx-background-color: #3A4D53;
+}
+
+.title
+{
+    -fx-font-size: 43px;
+    -fx-text-fill: #067677;
+}
+.title-first
+{
+    -fx-font-size: 63px;
+    -fx-text-fill: #077778;
+}
+.fielset-title{
+    -fx-font-size: 32px;
+    -fx-text-fill: #067677;
+    -fx-alignment:center;    
+}
+
+
+.apOtroVerde{
+    -fx-background-color: #0D6C6E;
+}
+
+
+.title_module{
+    -fx-pref-height: 80px;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold; 
+    -fx-padding: 0  20 0 75;
+    -fx-background-color: #16A4A5;
+    -fx-background-position: 20 center;
+    -fx-background-size: auto 70%;
+    -fx-background-repeat: no-repeat;
+}
+.apCerrarSesionHead{
+    -fx-background-image: url("../image/imgTrianguloVolteado.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:top center;
+    -fx-background-size: 40;
+}
+.apCerrarSesionFooter{
+    -fx-background-image: url("../image/imgTrianguloBtn.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:bottom center;
+    -fx-background-size: 40;
+}
+
+.btnCerrarSesion{
+    -fx-cursor: hand;
+    -fx-background-color: #57AFB0;    
+    -fx-pref-width: 220px;
+    -fx-pref-height: 40px;
+    -fx-font-family: "Calibri";
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+    -fx-font-size: 20px;
+}
+
+.title_option_puesta{
+    -fx-background-image: url("../image/puesta_blanco.png"); 
+}
+.title_option_reportes{
+    -fx-background-image: url("../image/reportes_blanco.png"); 
+}
+.title_option_tachas{
+    -fx-background-image: url("../image/tachas_blanco.png"); 
+}
+.title_option_sorteo{
+    -fx-background-image: url("../image/sorteo_blanco.png"); 
+}
+.title_option_ssorteo{
+    -fx-background-image: url("../image/ssorteo_blanco.png"); 
+}
+.title_option_transmision{
+    -fx-background-image: url("../image/transmision_blanco.png"); 
+}
+.title_option_solicitude{
+    -fx-background-image: url("../image/solicitud_ico.png"); 
+}
+
+
+.apFooter{
+    -fx-background-color: #057777;    
+}
+
+.title_eleccion{
+    -fx-text-fill: #B4D6D7;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold; 
+}
+
+.btnAdministradorHead{
+    -fx-cursor: hand;
+    -fx-background-color: #0E8E8D; 
+    -fx-pref-width: 220px;
+    -fx-background-image: url("../image/icoBtnAdministrador.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center 5;
+    -fx-background-size: 30;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;    
+}
+.btnRegresar{
+    -fx-cursor: hand;
+    -fx-background-color: #0E8E8D; 
+    -fx-pref-width: 60px;
+    -fx-background-image: url("../image/regresar.png");   
+    -fx-background-repeat: no-repeat;
+    -fx-background-position:center center;
+    -fx-background-size: 25;
+}
+
+.btn-process
+{   -fx-background-size:100% 100%;
+    -fx-background-repeat:no-repeat;
+    -fx-text-fill:#FFF;
+    -fx-font-size:24px;
+    -fx-cursor:hand;
+}
+.btn-azul
+{
+    -fx-background-image: url("../image/boton_azul.png");
+}
+.btn-rojo
+{
+    -fx-background-image: url("../image/boton_rojo.png");
+}
+
+
+.btn_icon{
+    -fx-cursor: hand;       
+    -fx-background-repeat: no-repeat;    
+    -fx-pref-width: 65;
+    -fx-pref-height: 51;
+    -fx-background-size: auto 78%;
+    -fx-background-position: center center;
+}
+.btn_icon_print{
+    -fx-background-color: #1DB1B1;
+    -fx-background-image: url("../image/imgImpresionSilenciosa.png");
+}
+.btn_icon_pdf{
+    -fx-background-color: #1DB1B1;
+    -fx-background-image: url("../image/imgExportaPdf.png");
+}
+.btn_icon_excel{
+    -fx-background-color: #1DB1B1;
+    -fx-background-image: url("../image/imgExcel.png");
+}
+.btn_icon_search{
+    -fx-background-color: transparent;
+    -fx-background-image: url("../image/search_ico.png");
+}
+.apHead{
+    -fx-background-color: #067677;
+    -fx-background-image: url("../image/Eva.png");
+    -fx-background-size: 90;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 20 center;
+}
+.apPrincipal{
+    -fx-background-color: #057777;
+}
+.apVerde{
+    -fx-background-color: #057777;
+}
+
+
+.apBlanco{
+    -fx-background-color: #FFFFFF !important;
+}
+.apNegro{
+    -fx-background-color: #293E43;
+}
+
+.apVerdeTwo{
+    -fx-background-color: #536569;
+}
+.apVerdeThree{
+    -fx-background-color: #3A4D53;
+}
+.apVerdeFour{
+    -fx-background-color: #6a787b;
+}
+/*.body
+{
+    -fx-font-family:"Calibri";
+}*/
+
+.subtitle
+{
+    -fx-font-size: 18px;
+    -fx-text-fill: #330066;
+}
+
+.simple-label
+{
+    -fx-font-size: 16px;
+}
+
+
+
+
+.medium-label
+{
+    -fx-font-size: 22px;
+}
+.simple-text
+{
+    -fx-font-size: 15px;
+}
+
+.simple-rbutton
+{
+    -fx-font-size: 14px;
+}
+
+
+.lblVersion{
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: "Calibri";
+    -fx-font-size: 20px;
+}
+
+.table
+{
+    -fx-background-color: #FFF; 
+    -fx-border-width:0 1px 0 1px;
+    -fx-border-color: #A9A8A8;
+    -fx-border-style: solid;
+    -fx-padding:0px;
+}
+.table Label
+{
+    -fx-padding: 0px 0px 0px 10px;
+    -fx-border-width:0 1px 1px 0;
+    -fx-border-color: #A9A8A8;
+    -fx-border-style: solid;
+    -fx-pref-height:30px;
+    -fx-font-size:14px;
+}
+.label-right
+{
+    -fx-border-color: #A9A8A8 transparent  #A9A8A8 #A9A8A8 !important;
+}
+.fielset-popup
+{
+    -fx-border-style:solid;
+    -fx-border-width:2px;
+    -fx-border-color:#FFF;
+}
+.popup-label{
+    -fx-text-fill:#FFF;
+    -fx-font-weight:bold;
+    -fx-font-size:16px;
+}
+
+.fielset-popup Label{
+    -fx-text-fill:#FFF;
+    -fx-font-weight:bold;
+    -fx-font-size:16px;
+}
+.fielset-popup-title
+{
+    -fx-text-fill:#FFF;
+    -fx-font-size:20px;
+    -fx-background-color: #293E43;
+    -fx-alignment:center;
+}
+.fielset
+{
+    -fx-border-style:solid;
+    -fx-border-width:2px;
+    -fx-border-color:#A9A8A8;
+}
+.fielset-title
+{
+    -fx-background-color:#FFF;
+    -fx-alignment:center;
+}
+
+.simple-button{
+    -fx-text-fill: #FFFFFF;
+    -fx-text-alignment: center;
+    -fx-background-color: #6a787b;
+    -fx-background-radius: 0px;
+    -fx-font-size: 17px;
+    -fx-cursor: hand;
+    /*-fx-font-weight: bold;*/
+    /* -fx-pref-width: 140px;
+     -fx-pref-height: 50px;*/
+}
+
+
+
+
+.progress-bar {
+    -fx-indeterminate-bar-length: 60;
+    -fx-indeterminate-bar-escape: true;
+    -fx-indeterminate-bar-flip: true;
+    -fx-indeterminate-bar-animation-time: 2;
+}
+.progress-bar > .bar {
+    -fx-background-repeat-y:no-repeat;
+    -fx-background-repeat-x:repeat;
+    -fx-background-size:10 100%;
+    -fx-background-postion:center;
+    -fx-background-image: url("../image/barra_loading.png");
+    //-fx-background-color: //linear-gradient(to bottom, derive(-fx-accent, -7%), derive(-fx-accent, 0%), derive(-fx-accent, -3%), derive(-fx-accent, -9%) );
+    -fx-background-insets: 3 3 4 3;
+    -fx-background-radius: 2;
+    -fx-padding: 0.75em;
+}
+.progress-bar:indeterminate > .bar {
+    -fx-background-color: linear-gradient(to left, transparent, -fx-accent);
+}
+.progress-bar > .track {
+    /*-fx-background-color: 
+        -fx-shadow-highlight-color,
+        linear-gradient(to bottom, derive(-fx-text-box-border, -10%), -fx-text-box-border),
+        linear-gradient(to bottom, 
+          derive(-fx-control-inner-background, -7%),
+          derive(-fx-control-inner-background, 0%),
+          derive(-fx-control-inner-background, -3%),
+          derive(-fx-control-inner-background, -9%)
+        );*/
+    -fx-background-color: #057777;
+    -fx-background-insets: 0, 0 0 1 0, 1 1 2 1;
+    -fx-background-radius: 4, 3, 2; /* 10, 9, 8 */
+}
+
+
+.progress-indicator {
+    -fx-skin: "com.sun.javafx.scene.control.skin.ProgressIndicatorSkin";
+}
+
+.progress-indicator .indicator {
+    /*-fx-background-color:
+        -fx-box-border,
+        -fx-outer-border,
+        -fx-inner-border,
+        -fx-body-color;*/
+    -fx-background-color: transparent;
+    -fx-background-insets: 1 0 -1 0, 0, 1, 2;
+    -fx-padding: 0.083333em; /* 1 */
+}
+
+.progress-indicator .progress {
+    /* -fx-background-color:
+         linear-gradient(to bottom, derive(-fx-accent,38%), derive(-fx-accent,-60%)),
+         linear-gradient(to bottom, derive(-fx-accent,38%), -fx-accent);*/
+    -fx-background-color: transparent;
+    -fx-background-insets: 0, 1;
+    -fx-padding: 0.75em; /* 9 */
+}
+
+/* TODO: scaling the shape seems to make it disappear */
+.progress-indicator .tick {
+    //-fx-background-color: transparent; // -fx-mark-color, white;
+    -fx-background-insets: 1 0 -1 0, 0;
+    -fx-padding: 0.416667em; /* 5 */
+    -fx-shape: "M 0,5 L 2.5,5 L 3.7,7.5 L 7.5,0 L 10,0 L 5,10 L 2.5,10 Z";
+    -fx-scale-shape: false;
+}
+
+.progress-indicator:indeterminate .spinner {
+    -fx-padding: 0.833333em; /* 10 */
+}
+
+.progress-indicator .percentage {
+    -fx-fill: #FFF;
+    -fx-font-weight:bold;
+    -fx-font-size: 15pt /* 11pt - 1 less than the default font */
+}
+
+
+.progress-indicator:disabled {
+    -fx-opacity: -fx-disabled-opacity;
+}
+
+.view-cerrar
+{
+    -fx-cursor: hand;
+    -fx-text-fill:#FFF;
+    -fx-font-size:43px;
+    -fx-background-color:transparent;
+}
+
+.button-detail{
+    -fx-cursor: hand;
+    -fx-background-repeat:no-repeat;
+    -fx-background-position:center;
+    -fx-background-color:transparent;
+    -fx-pref-width:30px;
+    -fx-pref-height:30px;
+}
+.button-del
+{
+    -fx-background-size:60%;
+    -fx-background-image:url("../image/delete_ico.png");
+}
+.button-ver
+{
+    -fx-background-size:85%;
+    -fx-background-image:url("../image/ver_ico.png");
+}
