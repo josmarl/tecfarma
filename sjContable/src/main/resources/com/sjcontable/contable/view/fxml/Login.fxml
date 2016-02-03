@@ -5,7 +5,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" fx:id="ppAnchorPane" minHeight="600.0" minWidth="1366.0" prefHeight="600.0" prefWidth="1366.0" styleClass="apPreLoginn" stylesheets="@../css/principal.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sjcontable.contable.view.controller.LoginController">
+<AnchorPane id="AnchorPane" fx:id="ppAnchorPane" minHeight="680.0" minWidth="1355.0" prefHeight="680.0" prefWidth="1355.0" styleClass="apPreLoginn" stylesheets="@../css/principal.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sjcontable.contable.view.controller.LoginController">
     <children>
         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
