@@ -15,7 +15,7 @@
                             <children>
                                 <AnchorPane maxWidth="621.0" minHeight="-Infinity" minWidth="1366.0" prefHeight="500.0" prefWidth="1366.0">
                            <children>
-                              <TextField layoutX="580.0" layoutY="129.0" />
+                              <TextField layoutX="580.0" layoutY="129.0" promptText="ingrese usuario..." />
                               <Label layoutX="522.0" layoutY="144.0" text="Usuario:" />
                               <Label layoutX="504.0" layoutY="219.0" text="Contraseña:" />
                               <TextField layoutX="580.0" layoutY="204.0" />

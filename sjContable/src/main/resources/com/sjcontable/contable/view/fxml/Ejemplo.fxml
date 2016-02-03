@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="com.sjcontable.contable.view.controller.EjemploController">
+   <children>
+      <Button layoutX="251.0" layoutY="145.0" mnemonicParsing="false" onAction="#handleDecirHola" text="decir hola" />
+      <Button layoutX="251.0" layoutY="216.0" mnemonicParsing="false" onAction="#handleOpenPop" text="Abrir Pop" />
+      <Button fx:id="btnOtroEvento" layoutX="142.0" layoutY="79.0" mnemonicParsing="false" text="otro tipo de llamadas a evento" />
+   </children>
+</AnchorPane>

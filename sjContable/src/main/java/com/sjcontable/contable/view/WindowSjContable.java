@@ -18,7 +18,8 @@ public class WindowSjContable extends WindowMain {
         this.pathImage = "/com/sjcontable/contable/view/image/";
         this.windows = new Screen[]{
             new Screen("Login.fxml", "LOGIN"),
-            new Screen("Dashboard.fxml", "DASHBOARD")
+            new Screen("Dashboard.fxml", "DASHBOARD"),
+            new Screen("Ejemplo.fxml","EJEMPLO")
         };
     }
 }

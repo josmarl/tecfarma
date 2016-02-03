@@ -26,6 +26,6 @@ public class LoginController extends LocalAppController implements Initializable
 
     @FXML
     protected void handleLogin(ActionEvent event) throws IOException {
-        openWindows(AppConstant.PAGE_DASHBOARD);
+        openWindows(AppConstant.PAGE_EJEMPLO);
     }
 }
