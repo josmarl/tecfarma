@@ -25,8 +25,8 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import com.sjcontable.animations.OnpeMessagesTypes;
-import com.sjcontable.animations.model.OnpeNotification;
+import com.sjcontable.animations.SjMessagesTypes;
+import com.sjcontable.animations.model.SjNotification;
 import com.sjcontable.animations.view.controller.ContextualBackController;
 import com.sjcontable.animations.view.controller.LocalAppController;
 import com.sjcontable.animations.view.controller.PopupController;
@@ -37,9 +37,9 @@ import com.sjcontable.animations.view.controller.NotificationController;
  *
  * @author aquispec
  */
-public class OnpeAnimations extends Application {
+public class SjAnimations extends Application {
 
-    private static OnpeAnimations instance;
+    private static SjAnimations instance;
 
     private AnchorPane apMain;
     private Stage stageMain;
@@ -47,10 +47,10 @@ public class OnpeAnimations extends Application {
     private String mainPathImages;
     private Double xOffset, yOffset;
 
-    private static List<OnpeNotification> lstOnpeNotiTopLeft;
-    private static List<OnpeNotification> lstOnpeNotiTopRight;
-    private static List<OnpeNotification> lstOnpeNotiBottomLeft;
-    private static List<OnpeNotification> lstOnpeNotiBottomRight;
+    private static List<SjNotification> lstOnpeNotiTopLeft;
+    private static List<SjNotification> lstOnpeNotiTopRight;
+    private static List<SjNotification> lstOnpeNotiBottomLeft;
+    private static List<SjNotification> lstOnpeNotiBottomRight;
 
     private boolean boolNot;
 
@@ -87,7 +87,7 @@ public class OnpeAnimations extends Application {
         launch(args);
     }
 
-    private OnpeAnimations() {
+    private SjAnimations() {
         mainPath = getClass().getResource("").toString();
         mainPathImages = mainPath + "image/";
         lstOnpeNotiTopLeft = new ArrayList<>();
@@ -98,9 +98,9 @@ public class OnpeAnimations extends Application {
         boolNot = false;
     }
 
-    public static OnpeAnimations getInstance() {
+    public static SjAnimations getInstance() {
         if (instance == null) {
-            instance = new OnpeAnimations();
+            instance = new SjAnimations();
         }
 
         return instance;
@@ -120,16 +120,16 @@ public class OnpeAnimations extends Application {
     private Image fetchImage(int TypeMessage) {
         Image image = null;
         switch (TypeMessage) {
-            case OnpeMessagesTypes.TYPE_SUCCESS:
+            case SjMessagesTypes.TYPE_SUCCESS:
                 image = new Image(mainPathImages + "popup_success.png");
                 break;
-            case OnpeMessagesTypes.TYPE_ERROR:
+            case SjMessagesTypes.TYPE_ERROR:
                 image = new Image(mainPathImages + "popup_error.png");
                 break;
-            case OnpeMessagesTypes.TYPE_INFORMATION:
+            case SjMessagesTypes.TYPE_INFORMATION:
                 image = new Image(mainPathImages + "popup_information.png");
                 break;
-            case OnpeMessagesTypes.TYPE_CONFIRMATION:
+            case SjMessagesTypes.TYPE_CONFIRMATION:
                 image = new Image(mainPathImages + "popup_information.png");
             default:
                 break;
@@ -277,49 +277,49 @@ public class OnpeAnimations extends Application {
     }
 
     public void openPopup(String message, int typeMessage) throws Exception {
-        PopupController cMessage = new PopupController(fetchImage(typeMessage), message, OnpeMessagesTypes.getTitle(typeMessage), mainPath);
+        PopupController cMessage = new PopupController(fetchImage(typeMessage), message, SjMessagesTypes.getTitle(typeMessage), mainPath);
         AnchorPane newApWindow = cMessage.load("Popup.fxml");
         newApWindow.getStyleClass().add("onpe_animation_popup");
         apMain.getChildren().add(newApWindow);
     }
 
     public void openPopup(String message, int typeMessage, double height) throws Exception {
-        PopupController cMessage = new PopupController(fetchImage(typeMessage), message, OnpeMessagesTypes.getTitle(typeMessage), mainPath, height);
+        PopupController cMessage = new PopupController(fetchImage(typeMessage), message, SjMessagesTypes.getTitle(typeMessage), mainPath, height);
         AnchorPane newApWindow = cMessage.load("Popup.fxml");
         newApWindow.getStyleClass().add("onpe_animation_popup");
         apMain.getChildren().add(newApWindow);
     }
 
     public void openPopup(String message, int typeMessage, EventHandler event) throws Exception {
-        PopupController cMessage = new PopupController(fetchImage(typeMessage), message, OnpeMessagesTypes.getTitle(typeMessage), mainPath, event);
+        PopupController cMessage = new PopupController(fetchImage(typeMessage), message, SjMessagesTypes.getTitle(typeMessage), mainPath, event);
         AnchorPane newApWindow = cMessage.load("Popup.fxml");
         newApWindow.getStyleClass().add("onpe_animation_popup");
         apMain.getChildren().add(newApWindow);
     }    
 
     public void openPopup(String message, int typeMessage, int typeOpcion, EventHandler event) throws Exception {
-        PopupController cMessage = new PopupController(fetchImage(typeMessage), message, OnpeMessagesTypes.getTitle(typeMessage), mainPath, typeOpcion, event);
+        PopupController cMessage = new PopupController(fetchImage(typeMessage), message, SjMessagesTypes.getTitle(typeMessage), mainPath, typeOpcion, event);
         AnchorPane newApWindow = cMessage.load("Popup.fxml");
         newApWindow.getStyleClass().add("onpe_animation_popup");
         apMain.getChildren().add(newApWindow);
     }
 
     public void openPopup(String message, int typeMessage, int typeOpcion, EventHandler event, double height) throws Exception {
-        PopupController cMessage = new PopupController(fetchImage(typeMessage), message, OnpeMessagesTypes.getTitle(typeMessage), mainPath, typeOpcion, event, height);
+        PopupController cMessage = new PopupController(fetchImage(typeMessage), message, SjMessagesTypes.getTitle(typeMessage), mainPath, typeOpcion, event, height);
         AnchorPane newApWindow = cMessage.load("Popup.fxml");
         newApWindow.getStyleClass().add("onpe_animation_popup");
         apMain.getChildren().add(newApWindow);
     }
 
     public void openPopup(String message, int typeMessage, int typeOpcion, EventHandler event1, EventHandler event2) throws Exception {
-        PopupController cMessage = new PopupController(fetchImage(typeMessage), message, OnpeMessagesTypes.getTitle(typeMessage), mainPath, typeOpcion, event1, event2);
+        PopupController cMessage = new PopupController(fetchImage(typeMessage), message, SjMessagesTypes.getTitle(typeMessage), mainPath, typeOpcion, event1, event2);
         AnchorPane newApWindow = cMessage.load("Popup.fxml");
         newApWindow.getStyleClass().add("onpe_animation_popup");
         apMain.getChildren().add(newApWindow);
     }
 
     public void openPopup(String message, int typeMessage, int typeOpcion, EventHandler event1, EventHandler event2, double height) throws Exception {
-        PopupController cMessage = new PopupController(fetchImage(typeMessage), message, OnpeMessagesTypes.getTitle(typeMessage), mainPath, typeOpcion, event1, event2, height);
+        PopupController cMessage = new PopupController(fetchImage(typeMessage), message, SjMessagesTypes.getTitle(typeMessage), mainPath, typeOpcion, event1, event2, height);
         AnchorPane newApWindow = cMessage.load("Popup.fxml");
         newApWindow.getStyleClass().add("onpe_animation_popup");
         apMain.getChildren().add(newApWindow);
@@ -337,7 +337,7 @@ public class OnpeAnimations extends Application {
         apMain.getChildren().add(newApWindow);
     }
 
-    public void openNotification(OnpeNotification onpeNoti, int time) throws Exception {
+    public void openNotification(SjNotification onpeNoti, int time) throws Exception {
         LocalAppController.timeNotification = time * 1000;
         maxNotification = 1;
         NotificationController cNotification = new NotificationController(onpeNoti.getPosition(), fetchImage(onpeNoti.getTipo()), onpeNoti.getMensaje(), onpeNoti.getLstStyle(), mainPath);
@@ -345,16 +345,16 @@ public class OnpeAnimations extends Application {
         apMain.getChildren().add(newApWindow);
     }
 
-    public void openMultiNotifications(List<OnpeNotification> lstOnpeNotification) throws Exception {
+    public void openMultiNotifications(List<SjNotification> lstOnpeNotification) throws Exception {
         LocalAppController.timeNotification = timeNotification * 1000;
-        for (OnpeNotification onpeNot : lstOnpeNotification) {
-            if (onpeNot.getPosition() == OnpeMessagesTypes.POSITION_TOPLEFT) {
+        for (SjNotification onpeNot : lstOnpeNotification) {
+            if (onpeNot.getPosition() == SjMessagesTypes.POSITION_TOPLEFT) {
                 lstOnpeNotiTopLeft.add(onpeNot);
-            } else if (onpeNot.getPosition() == OnpeMessagesTypes.POSITION_TOPRIGHT) {
+            } else if (onpeNot.getPosition() == SjMessagesTypes.POSITION_TOPRIGHT) {
                 lstOnpeNotiTopRight.add(onpeNot);
-            } else if (onpeNot.getPosition() == OnpeMessagesTypes.POSITION_BOTTOMRIGHT) {
+            } else if (onpeNot.getPosition() == SjMessagesTypes.POSITION_BOTTOMRIGHT) {
                 lstOnpeNotiBottomRight.add(onpeNot);
-            } else if (onpeNot.getPosition() == OnpeMessagesTypes.POSITION_BOTTOMLEFT) {
+            } else if (onpeNot.getPosition() == SjMessagesTypes.POSITION_BOTTOMLEFT) {
                 lstOnpeNotiBottomLeft.add(onpeNot);
             }
         }

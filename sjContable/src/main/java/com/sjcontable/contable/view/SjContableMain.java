@@ -44,21 +44,21 @@ public class SjContableMain extends Application {
 
     private void LoadMainWindow() throws Exception {
         SjConstant.PATH_APP = systemProperties.getProperty("user.dir");
-        AppController.wEva = new WindowSjContable();
-        AppController.wEva.pathFxml = getClass().getResource("fxml/").toString();
-        AppController.wEva.mainStage = this.mainStage;
+        AppController.winSj = new WindowSjContable();
+        AppController.winSj.pathFxml = getClass().getResource("fxml/").toString();
+        AppController.winSj.mainStage = this.mainStage;
 
         if (SjConstant.MODE_PROD) {
 
-            Screen screen = AppController.wEva.windows[AppConstant.PAGE_LOGIN];
-            FXMLLoader loader = new FXMLLoader(new URL(AppController.wEva.pathFxml + screen.getFxmlWindow()));
+            Screen screen = AppController.winSj.windows[AppConstant.PAGE_LOGIN];
+            FXMLLoader loader = new FXMLLoader(new URL(AppController.winSj.pathFxml + screen.getFxmlWindow()));
 
-            AppController.wEva.apMain = (AnchorPane) loader.load();
-            Scene scene = new Scene(AppController.wEva.apMain);
+            AppController.winSj.apMain = (AnchorPane) loader.load();
+            Scene scene = new Scene(AppController.winSj.apMain);
 
-            AppController.wEva.mainStage.setScene(scene);
+            AppController.winSj.mainStage.setScene(scene);
 
-            AppController.wEva.mainStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+            AppController.winSj.mainStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
 
                 @Override
                 public void handle(WindowEvent event) {
@@ -70,22 +70,22 @@ public class SjContableMain extends Application {
                 }
             });
 
-            Screen screenLogin = AppController.wEva.windows[AppConstant.PAGE_LOGIN];
-            FXMLLoader loaderLogin = new FXMLLoader(new URL(AppController.wEva.pathFxml + screenLogin.getFxmlWindow()));
+            Screen screenLogin = AppController.winSj.windows[AppConstant.PAGE_LOGIN];
+            FXMLLoader loaderLogin = new FXMLLoader(new URL(AppController.winSj.pathFxml + screenLogin.getFxmlWindow()));
             AnchorPane newApWindow = (AnchorPane) loaderLogin.load();
 
-            AppController.wEva.apMain.getChildren().add(0, newApWindow);
+            AppController.winSj.apMain.getChildren().add(0, newApWindow);
 
         } else {
-            Screen screenLogin = AppController.wEva.windows[AppConstant.PAGE_LOGIN];
-            FXMLLoader loaderLogin = new FXMLLoader(new URL(AppController.wEva.pathFxml + screenLogin.getFxmlWindow()));
-            AppController.wEva.apMain = (AnchorPane) loaderLogin.load();
-            Scene scene = new Scene(AppController.wEva.apMain);
-            AppController.wEva.mainStage.setScene(scene);
+            Screen screenLogin = AppController.winSj.windows[AppConstant.PAGE_LOGIN];
+            FXMLLoader loaderLogin = new FXMLLoader(new URL(AppController.winSj.pathFxml + screenLogin.getFxmlWindow()));
+            AppController.winSj.apMain = (AnchorPane) loaderLogin.load();
+            Scene scene = new Scene(AppController.winSj.apMain);
+            AppController.winSj.mainStage.setScene(scene);
 
         }
 
-        AppController.wEva.mainStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+        AppController.winSj.mainStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
 
             @Override
             public void handle(WindowEvent event) {
@@ -96,9 +96,9 @@ public class SjContableMain extends Application {
             }
         });
 
-        AppController.wEva.mainStage.setFullScreenExitHint("");
-        AppController.wEva.mainStage.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);
-        AppController.wEva.mainStage.getScene().addEventFilter(MouseEvent.MOUSE_RELEASED,
+        AppController.winSj.mainStage.setFullScreenExitHint("");
+        AppController.winSj.mainStage.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);
+        AppController.winSj.mainStage.getScene().addEventFilter(MouseEvent.MOUSE_RELEASED,
                 new EventHandler<MouseEvent>() {
                     @Override
                     public void handle(MouseEvent event) {
@@ -107,7 +107,7 @@ public class SjContableMain extends Application {
                         }
                     }
                 });
-        AppController.wEva.mainStage.setFullScreen(SjConstant.MODE_PROD);
-        AppController.wEva.mainStage.show();
+        AppController.winSj.mainStage.setFullScreen(SjConstant.MODE_PROD);
+        AppController.winSj.mainStage.show();
     }
 }

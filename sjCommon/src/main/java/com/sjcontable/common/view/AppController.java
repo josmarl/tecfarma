@@ -34,31 +34,31 @@ public class AppController {
     protected int timeAnimation = 200;
     private Integer defaultSpeed = 200;
     protected FXMLLoader loader;
-    public static WindowMain wEva;
+    public static WindowMain winSj;
 
     @FXML
     protected void openWindows(int index) throws IOException {
-        Screen screen = wEva.windows[index];
-        loader = new FXMLLoader(new URL(wEva.pathFxml + screen.getFxmlWindow()));
+        Screen screen = winSj.windows[index];
+        loader = new FXMLLoader(new URL(winSj.pathFxml + screen.getFxmlWindow()));
         AnchorPane newApWindow = (AnchorPane) loader.load();
-        newApWindow.setPrefWidth(wEva.apMain.getWidth());
-        newApWindow.setPrefHeight(wEva.apMain.getHeight());
-        wEva.apMain.getChildren().setAll(newApWindow);
+        newApWindow.setPrefWidth(winSj.apMain.getWidth());
+        newApWindow.setPrefHeight(winSj.apMain.getHeight());
+        winSj.apMain.getChildren().setAll(newApWindow);
     }
 
     @FXML
     protected void openWindows(int index, String packageLang) throws IOException {
-        Screen screen = wEva.windows[index];
-        loader = new FXMLLoader(new URL(wEva.pathFxml + screen.getFxmlWindow()));
+        Screen screen = winSj.windows[index];
+        loader = new FXMLLoader(new URL(winSj.pathFxml + screen.getFxmlWindow()));
 
-        if (wEva.pathLang != null) {
+        if (winSj.pathLang != null) {
             loader.setResources(ResourceBundle.getBundle(packageLang, Locale.ENGLISH));
         }
 
         AnchorPane newApWindow = (AnchorPane) loader.load();
-        newApWindow.setPrefWidth(wEva.apMain.getWidth());
-        newApWindow.setPrefHeight(wEva.apMain.getHeight());
-        wEva.apMain.getChildren().setAll(newApWindow);
+        newApWindow.setPrefWidth(winSj.apMain.getWidth());
+        newApWindow.setPrefHeight(winSj.apMain.getHeight());
+        winSj.apMain.getChildren().setAll(newApWindow);
     }
 
     public FXMLLoader getLoader() {
@@ -67,17 +67,17 @@ public class AppController {
 
     @FXML
     protected AnchorPane loadFxml(int index) throws MalformedURLException, IOException {
-        Screen screen = wEva.windows[index];
+        Screen screen = winSj.windows[index];
         AnchorPane ap;
         FXMLLoader loaderx;
-        loaderx = new FXMLLoader(new URL(wEva.pathFxml + screen.getFxmlWindow()));
+        loaderx = new FXMLLoader(new URL(winSj.pathFxml + screen.getFxmlWindow()));
         ap = (AnchorPane) loaderx.load();
         return ap;
     }
 
     @FXML
     protected void close(ActionEvent event) {
-        wEva.mainStage.close();
+        winSj.mainStage.close();
     }
 
     public void animationWidth(AnchorPane apNode, Double width, Integer speed, EventHandler<ActionEvent> finalEvent) {

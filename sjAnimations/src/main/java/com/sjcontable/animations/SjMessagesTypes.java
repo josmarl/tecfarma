@@ -9,7 +9,7 @@ package com.sjcontable.animations;
  *
  * @author aquispec
  */
-public class OnpeMessagesTypes {
+public class SjMessagesTypes {
 
     public static final int TYPE_SUCCESS = 1;
     public static final int TYPE_ERROR = 2;

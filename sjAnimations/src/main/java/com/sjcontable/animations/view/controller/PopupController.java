@@ -26,7 +26,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.shape.Line;
 import javafx.util.Duration;
-import com.sjcontable.animations.OnpeMessagesTypes;
+import com.sjcontable.animations.SjMessagesTypes;
 
 public class PopupController extends LocalAppController implements Initializable {
 
@@ -130,14 +130,14 @@ public class PopupController extends LocalAppController implements Initializable
         if (mHeight == 0) {
             mHeight = 450;
         }
-        if (typeOpcion == OnpeMessagesTypes.OPCION_YES_NO) {
+        if (typeOpcion == SjMessagesTypes.OPCION_YES_NO) {
             btnAceptar.setVisible(false);
             btnCancelar.setVisible(false);
             btnSI.setOnAction(eventMessage1);
             if (eventMessage2!= null) {
                 btnNO.setOnAction(eventMessage2);
             }            
-        } else if (typeOpcion == OnpeMessagesTypes.OPCION_ACCEPT_CANCEL) {
+        } else if (typeOpcion == SjMessagesTypes.OPCION_ACCEPT_CANCEL) {
             btnSI.setVisible(false);
             btnNO.setVisible(false);
             btnAceptar.setOnAction(eventMessage1);            

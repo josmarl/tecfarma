@@ -22,7 +22,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
-import com.sjcontable.animations.OnpeMessagesTypes;
+import com.sjcontable.animations.SjMessagesTypes;
 
 /**
  * FXML Controller class
@@ -63,28 +63,28 @@ public class NotificationController extends LocalAppController implements Initia
         timePause = timeNotification;
        
         switch (position) {
-            case OnpeMessagesTypes.POSITION_TOPLEFT:
+            case SjMessagesTypes.POSITION_TOPLEFT:
                 AnchorPane.setLeftAnchor(apNotification, intAnchor);
                 AnchorPane.setTopAnchor(apNotification, intAnchor + (125.00 * (countNotification - 1)));
                 AnchorPane.setTopAnchor(apNotification1, -130.00);
                 INT_MOVIMIENTO_TOP = 130;
                 INT_MOVIMIENTO_BOTTOM = -130;
                 break;
-            case OnpeMessagesTypes.POSITION_TOPRIGHT:
+            case SjMessagesTypes.POSITION_TOPRIGHT:
                 AnchorPane.setRightAnchor(apNotification, intAnchor);
                 AnchorPane.setTopAnchor(apNotification, intAnchor + (125.00 * (countNotification - 1)));
                 AnchorPane.setTopAnchor(apNotification1, -130.00);
                 INT_MOVIMIENTO_TOP = 130;
                 INT_MOVIMIENTO_BOTTOM = -130;
                 break;
-            case OnpeMessagesTypes.POSITION_BOTTOMRIGHT:
+            case SjMessagesTypes.POSITION_BOTTOMRIGHT:
                 AnchorPane.setRightAnchor(apNotification, intAnchor);
                 AnchorPane.setBottomAnchor(apNotification, intAnchor + (125.00 * (countNotification - 1)));
                 AnchorPane.setBottomAnchor(apNotification1, -130.00);
                 INT_MOVIMIENTO_TOP = -130;
                 INT_MOVIMIENTO_BOTTOM = 130;
                 break;
-            case OnpeMessagesTypes.POSITION_BOTTOMLEFT:
+            case SjMessagesTypes.POSITION_BOTTOMLEFT:
                 AnchorPane.setLeftAnchor(apNotification, intAnchor);
                 AnchorPane.setBottomAnchor(apNotification, intAnchor + (125.00 * (countNotification - 1)));
                 AnchorPane.setBottomAnchor(apNotification1, -130.00);

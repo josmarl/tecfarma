@@ -11,24 +11,24 @@ import java.util.List;
  *
  * @author aquispec
  */
-public class OnpeNotification {
+public class SjNotification {
     private int tipo;
     private String mensaje;
     private int position;
     private int orden;
     private List<String> lstStyle;
 
-    public OnpeNotification(int tipo, String mensaje){
+    public SjNotification(int tipo, String mensaje){
         this.tipo = tipo;
         this.mensaje = mensaje;
     }
     
-    public OnpeNotification(int tipo, String mensaje, int position){
+    public SjNotification(int tipo, String mensaje, int position){
         this.tipo = tipo;
         this.mensaje = mensaje;
         this.position = position;
     }
-    public OnpeNotification(int tipo, String mensaje, int position, List<String> lstStyle){
+    public SjNotification(int tipo, String mensaje, int position, List<String> lstStyle){
         this.tipo = tipo;
         this.mensaje = mensaje;
         this.position = position;

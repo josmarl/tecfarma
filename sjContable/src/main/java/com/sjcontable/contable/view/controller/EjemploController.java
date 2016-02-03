@@ -5,8 +5,8 @@
  */
 package com.sjcontable.contable.view.controller;
 
-import com.sjcontable.animations.OnpeMessagesTypes;
-import com.sjcontable.animations.view.OnpeAnimations;
+import com.sjcontable.animations.SjMessagesTypes;
+import com.sjcontable.animations.view.SjAnimations;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -25,14 +25,15 @@ import javafx.scene.input.KeyEvent;
 public class EjemploController implements Initializable {
 
     
-    OnpeAnimations pop = OnpeAnimations.getInstance();
+    SjAnimations pop = SjAnimations.getInstance();
+    
     @FXML
     Button btnOtroEvento;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-        LocalAppController.wEva.apMain.setOnKeyPressed(new EventHandler<KeyEvent>() {
+        LocalAppController.winSj.apMain.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent event) {
                 if (event.getCode() == KeyCode.F1) {
@@ -42,8 +43,7 @@ public class EjemploController implements Initializable {
                 if (event.getCode() == KeyCode.F2) {
                     System.out.println("le di f2");
                 }
-                
-                
+               
             }
         });
         
@@ -56,8 +56,8 @@ public class EjemploController implements Initializable {
     
     @FXML
     protected void handleOpenPop(ActionEvent event) throws Exception{
-        pop.setApMain(LocalAppController.wEva.apMain);
-        pop.openPopup("este es mi popup", OnpeMessagesTypes.TYPE_INFORMATION);
+        pop.setApMain(LocalAppController.winSj.apMain);
+        pop.openPopup("este es mi popup", SjMessagesTypes.TYPE_INFORMATION);
     }
     
 }
