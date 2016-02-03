@@ -5,19 +5,27 @@
  */
 package com.sjcontable.contable.view.controller;
 
+import com.sjcontable.contable.constant.AppConstant;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
 /**
  *
  * @author josmarl
  */
-public class LoginController implements Initializable{
+public class LoginController extends LocalAppController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        System.out.println("hello world");
+
     }
-    
+
+    @FXML
+    protected void handleLogin(ActionEvent event) throws IOException {
+        openWindows(AppConstant.PAGE_DASHBOARD);
+    }
 }
