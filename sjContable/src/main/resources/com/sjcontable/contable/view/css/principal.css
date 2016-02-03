@@ -355,7 +355,7 @@ ScrollPane .increment-button:hover ,ScrollPane .decrement-button:hover {
 }
 
 .apPreLoginn{
-    -fx-background-image: url("../image/fondoPreLogin.png"), url("../image/logoOnpeHexagono.png");
+    -fx-background-color: #FFFFFF;
     -fx-background-repeat: no-repeat;
     -fx-background-size: stretch, 330;
     -fx-background-position: 0 0 ,15 40;

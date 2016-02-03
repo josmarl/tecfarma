@@ -9,35 +9,16 @@
     <children>
         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
-                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="3000.0">
+                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="1366.0">
                     <children>
                         <HBox prefWidth="200.0">
                             <children>
-                                <AnchorPane minWidth="0.0" prefHeight="683.0" prefWidth="2000.0" styleClass="apAtrasMovilDerecha" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                                 <AnchorPane maxWidth="621.0" minHeight="-Infinity" minWidth="621.0" prefHeight="683.0" prefWidth="621.0" />
-                                <AnchorPane minWidth="0.0" prefHeight="200.0" prefWidth="2000.0" styleClass="apAtrasMovilIzquierda" />
                             </children>
                             <VBox.margin>
                                 <Insets />
                             </VBox.margin>
                         </HBox>
-                    </children>
-                </VBox>
-            </children>
-        </HBox>
-        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-            <children>
-                <VBox alignment="CENTER" prefHeight="800.0" prefWidth="725.0">
-                    <children>
-                        <AnchorPane prefHeight="683.0" prefWidth="956.0" styleClass="apLogeo">
-                            <children>
-                                <AnchorPane layoutX="372.0" layoutY="241.0" prefHeight="74.0" prefWidth="70.0" styleClass="apRojo" />
-                                <Button fx:id="btnLogin" layoutX="477.0" layoutY="241.0" mnemonicParsing="false"  styleClass="btnIngresarLogin" text="INGRESAR" />
-                                <AnchorPane layoutX="372.0" layoutY="324.0" prefHeight="176.0" prefWidth="252.0" styleClass="apAmarillo" />
-                                <TextField fx:id="txtUsuario" layoutX="372.0" layoutY="94.0" prefHeight="37.0" prefWidth="170.0" promptText="Usuario" styleClass="required,txtLogin" />
-                                <PasswordField fx:id="txtPassword" layoutX="372.0" layoutY="173.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefColumnCount="40" prefHeight="48.0" prefWidth="170.0" promptText="Clave" styleClass="password-field,txtLogin,required" /><Button layoutX="372.0" layoutY="241.0" mnemonicParsing="false" prefWidth="100.0" styleClass="btnIngresarLogin,btnIngresarExit" text="SALIR" />
-                            </children>
-                        </AnchorPane>
                     </children>
                 </VBox>
             </children>
