@@ -1,0 +1,23 @@
+
+.text-field-sj{
+    -fx-background-color: #6C5C5F;
+    -fx-background-radius: 0px;
+    -fx-border-style: none;
+    -fx-border-color:transparent;
+}
+
+.label-sj{
+    -fx-text-fill: #6C5C5F;
+    -fx-font-size:14px;
+}
+
+.btn-sj{
+    -fx-background-color: #0F0000;
+    -fx-text-fill: #FFF;
+    -fx-font-size:15px;
+    -fx-background-radius: 0px;
+}
+.btn-sj:hover{
+    -fx-background-color: #9D521F;
+    -fx-cursor: hand;
+}
