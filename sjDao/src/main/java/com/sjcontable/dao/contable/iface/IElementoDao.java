@@ -3,12 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.sjcontable.contable.service.impl;
+package com.sjcontable.dao.contable.iface;
+
+import com.sjcontable.dao.IDataAccess;
+import com.sjcontable.model.ContElemento;
 
 /**
  *
  * @author josmarl
  */
-public class CuentaService {
-
+public interface IElementoDao extends IDataAccess<ContElemento>{
+    
 }

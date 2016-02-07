@@ -5,10 +5,28 @@
  */
 package com.sjcontable.contable.service;
 
+import com.sjcontable.contable.service.iface.IElementoService;
+import com.sjcontable.contable.service.impl.ElementoService;
+
 /**
  *
  * @author josmarl
  */
 public class FactoryService {
-    
+
+    private FactoryService() {
+    }
+
+    public static FactoryService getInstance() {
+        return FactoryServiceHolder.INSTANCE;
+    }
+
+    private static class FactoryServiceHolder {
+
+        private static final FactoryService INSTANCE = new FactoryService();
+    }
+
+    public IElementoService getElementoService() {
+        return new ElementoService();
+    }
 }
