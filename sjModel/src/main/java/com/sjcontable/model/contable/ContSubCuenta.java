@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.sjcontable.model;
+package com.sjcontable.model.contable;
 
 import java.io.Serializable;
 import java.util.Collection;
@@ -24,15 +24,15 @@ import javax.persistence.Table;
  * @author josmarl
  */
 @Entity
-@Table(name = "cont_cuenta")
+@Table(name = "cont_sub_cuenta")
 @NamedQueries({
-    @NamedQuery(name = "ContCuenta.findAll", query = "SELECT c FROM ContCuenta c")})
-public class ContCuenta implements Serializable {
+    @NamedQuery(name = "ContSubCuenta.findAll", query = "SELECT c FROM ContSubCuenta c")})
+public class ContSubCuenta implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @Basic(optional = false)
-    @Column(name = "id_cuenta")
-    private String idCuenta;
+    @Column(name = "id_sub_cuenta")
+    private String idSubCuenta;
     @Basic(optional = false)
     @Column(name = "cuenta")
     private String cuenta;
@@ -42,32 +42,32 @@ public class ContCuenta implements Serializable {
     @Basic(optional = false)
     @Column(name = "estado")
     private String estado;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idCuenta")
-    private Collection<ContSubCuenta> contSubCuentaCollection;
-    @JoinColumn(name = "id_elemento", referencedColumnName = "id_elemento")
+    @JoinColumn(name = "id_cuenta", referencedColumnName = "id_cuenta")
     @ManyToOne(optional = false)
-    private ContElemento idElemento;
+    private ContCuenta idCuenta;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idSubCuenta")
+    private Collection<ContDivisionaria> contDivisionariaCollection;
 
-    public ContCuenta() {
+    public ContSubCuenta() {
     }
 
-    public ContCuenta(String idCuenta) {
-        this.idCuenta = idCuenta;
+    public ContSubCuenta(String idSubCuenta) {
+        this.idSubCuenta = idSubCuenta;
     }
 
-    public ContCuenta(String idCuenta, String cuenta, String descripcion, String estado) {
-        this.idCuenta = idCuenta;
+    public ContSubCuenta(String idSubCuenta, String cuenta, String descripcion, String estado) {
+        this.idSubCuenta = idSubCuenta;
         this.cuenta = cuenta;
         this.descripcion = descripcion;
         this.estado = estado;
     }
 
-    public String getIdCuenta() {
-        return idCuenta;
+    public String getIdSubCuenta() {
+        return idSubCuenta;
     }
 
-    public void setIdCuenta(String idCuenta) {
-        this.idCuenta = idCuenta;
+    public void setIdSubCuenta(String idSubCuenta) {
+        this.idSubCuenta = idSubCuenta;
     }
 
     public String getCuenta() {
@@ -94,37 +94,37 @@ public class ContCuenta implements Serializable {
         this.estado = estado;
     }
 
-    public Collection<ContSubCuenta> getContSubCuentaCollection() {
-        return contSubCuentaCollection;
+    public ContCuenta getIdCuenta() {
+        return idCuenta;
     }
 
-    public void setContSubCuentaCollection(Collection<ContSubCuenta> contSubCuentaCollection) {
-        this.contSubCuentaCollection = contSubCuentaCollection;
+    public void setIdCuenta(ContCuenta idCuenta) {
+        this.idCuenta = idCuenta;
     }
 
-    public ContElemento getIdElemento() {
-        return idElemento;
+    public Collection<ContDivisionaria> getContDivisionariaCollection() {
+        return contDivisionariaCollection;
     }
 
-    public void setIdElemento(ContElemento idElemento) {
-        this.idElemento = idElemento;
+    public void setContDivisionariaCollection(Collection<ContDivisionaria> contDivisionariaCollection) {
+        this.contDivisionariaCollection = contDivisionariaCollection;
     }
 
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (idCuenta != null ? idCuenta.hashCode() : 0);
+        hash += (idSubCuenta != null ? idSubCuenta.hashCode() : 0);
         return hash;
     }
 
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof ContCuenta)) {
+        if (!(object instanceof ContSubCuenta)) {
             return false;
         }
-        ContCuenta other = (ContCuenta) object;
-        if ((this.idCuenta == null && other.idCuenta != null) || (this.idCuenta != null && !this.idCuenta.equals(other.idCuenta))) {
+        ContSubCuenta other = (ContSubCuenta) object;
+        if ((this.idSubCuenta == null && other.idSubCuenta != null) || (this.idSubCuenta != null && !this.idSubCuenta.equals(other.idSubCuenta))) {
             return false;
         }
         return true;
@@ -132,7 +132,7 @@ public class ContCuenta implements Serializable {
 
     @Override
     public String toString() {
-        return "com.sjcontable.model.ContCuenta[ idCuenta=" + idCuenta + " ]";
+        return "com.sjcontable.model.ContSubCuenta[ idSubCuenta=" + idSubCuenta + " ]";
     }
     
 }

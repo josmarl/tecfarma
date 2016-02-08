@@ -5,14 +5,13 @@
  */
 
 import com.sjcontable.contable.service.FactoryService;
-import com.sjcontable.model.ContElemento;
+import com.sjcontable.model.contable.ContElemento;
 import java.util.List;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 /**
  *
@@ -43,8 +42,8 @@ public class DaoTest {
     public void test() {
         FactoryService fs = FactoryService.getInstance();
         List<ContElemento> list = fs.getElementoService().listElemento();
-        for (ContElemento ele : list) {
+        list.stream().forEach((ele) -> {
             System.out.println(ele.getCuenta());
-        }
+        });
     }
 }

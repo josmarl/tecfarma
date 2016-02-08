@@ -7,7 +7,7 @@ package com.sjcontable.contable.service.impl;
 
 import com.sjcontable.contable.service.iface.IElementoService;
 import com.sjcontable.dao.contable.ContableFactoryDao;
-import com.sjcontable.model.ContElemento;
+import com.sjcontable.model.contable.ContElemento;
 import java.util.List;
 
 /**

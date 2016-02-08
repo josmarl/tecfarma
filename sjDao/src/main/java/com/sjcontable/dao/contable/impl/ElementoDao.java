@@ -7,7 +7,7 @@ package com.sjcontable.dao.contable.impl;
 
 import com.sjcontable.dao.DataAccess;
 import com.sjcontable.dao.contable.iface.IElementoDao;
-import com.sjcontable.model.ContElemento;
+import com.sjcontable.model.contable.ContElemento;
 
 /**
  *

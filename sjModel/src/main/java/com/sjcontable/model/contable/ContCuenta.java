@@ -3,10 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.sjcontable.model;
+package com.sjcontable.model.contable;
 
 import java.io.Serializable;
+import java.util.Collection;
 import javax.persistence.Basic;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -14,6 +16,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -21,15 +24,15 @@ import javax.persistence.Table;
  * @author josmarl
  */
 @Entity
-@Table(name = "cont_subdivisionaria")
+@Table(name = "cont_cuenta")
 @NamedQueries({
-    @NamedQuery(name = "ContSubdivisionaria.findAll", query = "SELECT c FROM ContSubdivisionaria c")})
-public class ContSubdivisionaria implements Serializable {
+    @NamedQuery(name = "ContCuenta.findAll", query = "SELECT c FROM ContCuenta c")})
+public class ContCuenta implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @Basic(optional = false)
-    @Column(name = "id_subdivisionaria")
-    private String idSubdivisionaria;
+    @Column(name = "id_cuenta")
+    private String idCuenta;
     @Basic(optional = false)
     @Column(name = "cuenta")
     private String cuenta;
@@ -39,30 +42,32 @@ public class ContSubdivisionaria implements Serializable {
     @Basic(optional = false)
     @Column(name = "estado")
     private String estado;
-    @JoinColumn(name = "id_divisionaria", referencedColumnName = "id_divisionaria")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idCuenta")
+    private Collection<ContSubCuenta> contSubCuentaCollection;
+    @JoinColumn(name = "id_elemento", referencedColumnName = "id_elemento")
     @ManyToOne(optional = false)
-    private ContDivisionaria idDivisionaria;
+    private ContElemento idElemento;
 
-    public ContSubdivisionaria() {
+    public ContCuenta() {
     }
 
-    public ContSubdivisionaria(String idSubdivisionaria) {
-        this.idSubdivisionaria = idSubdivisionaria;
+    public ContCuenta(String idCuenta) {
+        this.idCuenta = idCuenta;
     }
 
-    public ContSubdivisionaria(String idSubdivisionaria, String cuenta, String descripcion, String estado) {
-        this.idSubdivisionaria = idSubdivisionaria;
+    public ContCuenta(String idCuenta, String cuenta, String descripcion, String estado) {
+        this.idCuenta = idCuenta;
         this.cuenta = cuenta;
         this.descripcion = descripcion;
         this.estado = estado;
     }
 
-    public String getIdSubdivisionaria() {
-        return idSubdivisionaria;
+    public String getIdCuenta() {
+        return idCuenta;
     }
 
-    public void setIdSubdivisionaria(String idSubdivisionaria) {
-        this.idSubdivisionaria = idSubdivisionaria;
+    public void setIdCuenta(String idCuenta) {
+        this.idCuenta = idCuenta;
     }
 
     public String getCuenta() {
@@ -89,29 +94,37 @@ public class ContSubdivisionaria implements Serializable {
         this.estado = estado;
     }
 
-    public ContDivisionaria getIdDivisionaria() {
-        return idDivisionaria;
+    public Collection<ContSubCuenta> getContSubCuentaCollection() {
+        return contSubCuentaCollection;
     }
 
-    public void setIdDivisionaria(ContDivisionaria idDivisionaria) {
-        this.idDivisionaria = idDivisionaria;
+    public void setContSubCuentaCollection(Collection<ContSubCuenta> contSubCuentaCollection) {
+        this.contSubCuentaCollection = contSubCuentaCollection;
+    }
+
+    public ContElemento getIdElemento() {
+        return idElemento;
+    }
+
+    public void setIdElemento(ContElemento idElemento) {
+        this.idElemento = idElemento;
     }
 
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (idSubdivisionaria != null ? idSubdivisionaria.hashCode() : 0);
+        hash += (idCuenta != null ? idCuenta.hashCode() : 0);
         return hash;
     }
 
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof ContSubdivisionaria)) {
+        if (!(object instanceof ContCuenta)) {
             return false;
         }
-        ContSubdivisionaria other = (ContSubdivisionaria) object;
-        if ((this.idSubdivisionaria == null && other.idSubdivisionaria != null) || (this.idSubdivisionaria != null && !this.idSubdivisionaria.equals(other.idSubdivisionaria))) {
+        ContCuenta other = (ContCuenta) object;
+        if ((this.idCuenta == null && other.idCuenta != null) || (this.idCuenta != null && !this.idCuenta.equals(other.idCuenta))) {
             return false;
         }
         return true;
@@ -119,7 +132,7 @@ public class ContSubdivisionaria implements Serializable {
 
     @Override
     public String toString() {
-        return "com.sjcontable.model.ContSubdivisionaria[ idSubdivisionaria=" + idSubdivisionaria + " ]";
+        return "com.sjcontable.model.ContCuenta[ idCuenta=" + idCuenta + " ]";
     }
     
 }

@@ -5,7 +5,7 @@
  */
 package com.sjcontable.contable.service.iface;
 
-import com.sjcontable.model.ContElemento;
+import com.sjcontable.model.contable.ContElemento;
 import java.util.List;
 
 /**

@@ -1,5 +1,6 @@
 package com.sjcontable.dao;
 
+import com.sjcontable.dao.constants.DaoConstants;
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.util.ArrayList;
@@ -31,7 +32,7 @@ public abstract class DataAccess<E extends Serializable>
             session.save(entity);
             session.beginTransaction().commit();
         } catch (Exception e) {
-            this.logger.info("Mensage de Error en Al momento de Guardar " + e.getMessage());
+            this.logger.info(DaoConstants.MSG_ERROR_SAVE + e.getMessage());
         } finally {
             session.close();
         }
@@ -46,7 +47,7 @@ public abstract class DataAccess<E extends Serializable>
             session.update(entity);
             session.beginTransaction().commit();
         } catch (Exception e) {
-            this.logger.info("Mensage de Error en Al momento de Actualizar " + e.getMessage());
+            this.logger.info(DaoConstants.MSG_ERROR_UPDATE + e.getMessage());
         } finally {
             session.close();
         }
@@ -61,7 +62,7 @@ public abstract class DataAccess<E extends Serializable>
             session.delete(session.get(this.entityClass, id));
             session.beginTransaction().commit();
         } catch (Exception e) {
-            this.logger.info("Mensage de Error en Al momento de Eliminar " + e.getMessage());
+            this.logger.info(DaoConstants.MSG_ERROR_DELETE + e.getMessage());
         } finally {
             session.close();
         }
@@ -75,7 +76,7 @@ public abstract class DataAccess<E extends Serializable>
             session.delete(session.get(this.entityClass, id));
             session.beginTransaction().commit();
         } catch (Exception e) {
-            this.logger.info("Mensage de Error en Al momento de Eliminar " + e.getMessage());
+            this.logger.info(DaoConstants.MSG_ERROR_DELETE + e.getMessage());
         } finally {
             session.close();
         }
@@ -89,7 +90,7 @@ public abstract class DataAccess<E extends Serializable>
             session.delete(session.get(this.entityClass, id));
             session.beginTransaction().commit();
         } catch (Exception e) {
-            this.logger.info("Mensage de Error en Al momento de Eliminar " + e.getMessage());
+            this.logger.info(DaoConstants.MSG_ERROR_DELETE + e.getMessage());
         } finally {
             session.close();
         }
@@ -103,7 +104,7 @@ public abstract class DataAccess<E extends Serializable>
             session.delete(entity);
             t.commit();
         } catch (Exception e) {
-            this.logger.info("Mensage de Error en Al momento de Eliminar o Remover " + e.getMessage());
+            this.logger.info(DaoConstants.MSG_ERROR_DELETE + e.getMessage());
         } finally {
             session.close();
         }
@@ -118,7 +119,7 @@ public abstract class DataAccess<E extends Serializable>
             entidad = (E) (Serializable) session.createCriteria(this.entityClass).add(Restrictions.idEq(id)).uniqueResult();
             t.commit();
         } catch (Exception e) {
-            this.logger.info("Mensage de Error en Al momento de Buscar por el Id " + e.getMessage());
+            this.logger.info(DaoConstants.MSG_ERROR_GET + e.getMessage());
         } finally {
             session.close();
         }
@@ -134,7 +135,7 @@ public abstract class DataAccess<E extends Serializable>
             entidad = (E) (Serializable) session.get(this.entityClass, id);
             t.commit();
         } catch (Exception e) {
-            this.logger.info("Mensage de Error en Al momento de Buscar por el Id " + e.getMessage());
+            this.logger.info(DaoConstants.MSG_ERROR_GET + e.getMessage());
         } finally {
             session.close();
         }
@@ -150,7 +151,7 @@ public abstract class DataAccess<E extends Serializable>
             entidad = (E) (Serializable) session.get(this.entityClass, id);
             t.commit();
         } catch (Exception e) {
-            this.logger.info("Mensage de Error en Al momento de Buscar por el Id " + e.getMessage());
+            this.logger.info(DaoConstants.MSG_ERROR_GET + e.getMessage());
         } finally {
             session.close();
         }
@@ -166,7 +167,7 @@ public abstract class DataAccess<E extends Serializable>
             entidad = (E) (Serializable) session.get(this.entityClass, id);
             t.commit();
         } catch (Exception e) {
-            this.logger.info("Mensage de Error en Al momento de Buscar por el Id " + e.getMessage());
+            this.logger.info(DaoConstants.MSG_ERROR_GET + e.getMessage());
         } finally {
             session.close();
         }
@@ -185,7 +186,7 @@ public abstract class DataAccess<E extends Serializable>
             }
             t.commit();
         } catch (Exception e) {
-            this.logger.info("Mensage de Error en Al momento de Listar una Entidad " + e.getMessage());
+            this.logger.info(DaoConstants.MSG_ERROR_GET_ALL + e.getMessage());
         } finally {
             session.close();
         }
@@ -204,7 +205,7 @@ public abstract class DataAccess<E extends Serializable>
             }
             t.commit();
         } catch (Exception e) {
-            this.logger.info("Mensage de Error en Al momento de Listar una Entidad " + e.getMessage());
+            this.logger.info(DaoConstants.MSG_ERROR_GET_ALL + e.getMessage());
         } finally {
             session.close();
         }
@@ -223,7 +224,7 @@ public abstract class DataAccess<E extends Serializable>
             }
             t.commit();
         } catch (Exception e) {
-            this.logger.info("Mensage de Error en Al momento de Listar una Entidad " + e.getMessage());
+            this.logger.info(DaoConstants.MSG_ERROR_GET_ALL + e.getMessage());
         } finally {
             session.close();
         }
@@ -242,7 +243,7 @@ public abstract class DataAccess<E extends Serializable>
             }
             t.commit();
         } catch (Exception e) {
-            this.logger.info("Mensage de Error en Al momento de Listar una Entidad " + e.getMessage());
+            this.logger.info(DaoConstants.MSG_ERROR_GET_ALL + e.getMessage());
         } finally {
             session.close();
         }

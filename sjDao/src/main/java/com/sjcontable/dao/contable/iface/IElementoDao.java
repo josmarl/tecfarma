@@ -6,7 +6,7 @@
 package com.sjcontable.dao.contable.iface;
 
 import com.sjcontable.dao.IDataAccess;
-import com.sjcontable.model.ContElemento;
+import com.sjcontable.model.contable.ContElemento;
 
 /**
  *
