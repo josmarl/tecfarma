@@ -6,7 +6,9 @@
 package com.sjcontable.contable.service;
 
 import com.sjcontable.contable.service.iface.IElementoService;
+import com.sjcontable.contable.service.iface.IMaestroCuentasService;
 import com.sjcontable.contable.service.impl.ElementoService;
+import com.sjcontable.contable.service.impl.MaestroCuentasService;
 
 /**
  *
@@ -28,5 +30,9 @@ public class FactoryService {
 
     public IElementoService getElementoService() {
         return new ElementoService();
+    }
+
+    public IMaestroCuentasService getMaestroCuentasService() {
+        return new MaestroCuentasService();
     }
 }

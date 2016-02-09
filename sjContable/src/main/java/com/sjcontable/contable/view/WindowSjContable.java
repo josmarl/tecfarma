@@ -19,7 +19,7 @@ public class WindowSjContable extends WindowMain {
         this.windows = new Screen[]{
             new Screen("Login.fxml", "LOGIN"),
             new Screen("Dashboard.fxml", "DASHBOARD"),
-            new Screen("Ejemplo.fxml","EJEMPLO")
+            new Screen("MaestroCuentas.fxml","MAESTRO DE CUENTAS")
         };
     }
 }

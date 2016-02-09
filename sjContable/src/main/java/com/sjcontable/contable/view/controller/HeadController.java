@@ -14,18 +14,20 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
 /**
+ * FXML Controller class
  *
  * @author josmarl
  */
-public class LoginController extends LocalAppController implements Initializable {
+public class HeadController extends LocalAppController implements Initializable {
 
     @Override
-    public void initialize(URL location, ResourceBundle resources) {
+    public void initialize(URL url, ResourceBundle rb) {
 
     }
 
     @FXML
-    protected void handleLogin(ActionEvent event) throws IOException {
-        openWindows(AppConstant.PAGE_DASHBOARD);
+    protected void goToMantMaestroCuentas(ActionEvent event) throws IOException {
+        openWindows(AppConstant.PAGE_MC_MANTENANCE);
     }
+
 }

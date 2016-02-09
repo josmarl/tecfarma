@@ -6,7 +6,9 @@
 package com.sjcontable.dao.contable;
 
 import com.sjcontable.dao.contable.iface.IElementoDao;
+import com.sjcontable.dao.contable.iface.IMaestroCuentasDao;
 import com.sjcontable.dao.contable.impl.ElementoDao;
+import com.sjcontable.dao.contable.impl.MaestroCuentasDao;
 
 /**
  *
@@ -28,5 +30,9 @@ public class ContableFactoryDao {
 
     public IElementoDao getElementoDao() {
         return new ElementoDao();
+    }
+    
+    public IMaestroCuentasDao getMaestroCuentasDao(){
+        return new MaestroCuentasDao();
     }
 }
