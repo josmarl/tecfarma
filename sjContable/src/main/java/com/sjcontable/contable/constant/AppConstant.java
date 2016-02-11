@@ -13,6 +13,6 @@ public class AppConstant {
 
     public static int PAGE_LOGIN = 0;
     public static int PAGE_DASHBOARD = 1;
-    public static int PAGE_EJEMPLO = 2;
+    public static int PAGE_MC_MANTENANCE= 2;
 
 }

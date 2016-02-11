@@ -10,6 +10,8 @@
     <class>com.sjcontable.model.contable.ContElemento</class>
     <class>com.sjcontable.model.contable.ContSubdivisionaria</class>
     <class>com.sjcontable.model.contable.ContSubCuenta</class>
+    <class>com.sjcontable.model.contable.GloSucursal</class>
+    <class>com.sjcontable.model.contable.ContMaestroCuentas</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/sj_contable_2016?zeroDateTimeBehavior=convertToNull"/>
       <property name="javax.persistence.jdbc.user" value="root"/>

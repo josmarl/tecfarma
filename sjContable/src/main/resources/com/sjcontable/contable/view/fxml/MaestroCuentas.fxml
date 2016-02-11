@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="1355.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="com.sjcontable.contable.view.controller.MaestroCuentasController">
+   <children>
+      <TableView fx:id="tMaestroCuentas" layoutX="14.0" layoutY="240.0" prefHeight="200.0" prefWidth="592.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Cuenta" />
+          <TableColumn prefWidth="75.0" text="Descripcion" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

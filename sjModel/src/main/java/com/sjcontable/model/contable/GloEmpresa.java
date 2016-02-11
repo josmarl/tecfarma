@@ -26,6 +26,8 @@ import javax.persistence.Table;
 @NamedQueries({
     @NamedQuery(name = "GloEmpresa.findAll", query = "SELECT g FROM GloEmpresa g")})
 public class GloEmpresa implements Serializable {
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idEmpresa")
+    private Collection<GloSucursal> gloSucursalCollection;
     private static final long serialVersionUID = 1L;
     @Id
     @Basic(optional = false)
@@ -216,6 +218,14 @@ public class GloEmpresa implements Serializable {
     @Override
     public String toString() {
         return "com.sjcontable.model.GloEmpresa[ idEmpresa=" + idEmpresa + " ]";
+    }
+
+    public Collection<GloSucursal> getGloSucursalCollection() {
+        return gloSucursalCollection;
+    }
+
+    public void setGloSucursalCollection(Collection<GloSucursal> gloSucursalCollection) {
+        this.gloSucursalCollection = gloSucursalCollection;
     }
     
 }

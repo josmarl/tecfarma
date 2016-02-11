@@ -7,14 +7,16 @@
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password"></property>
 
-        <mapping class="com.sjcontable.model.ContCuenta"/>
-        <mapping class="com.sjcontable.model.ContDivisionaria"/>
-        <mapping class="com.sjcontable.model.ContElemento"/>
-        <mapping class="com.sjcontable.model.ContSubCuenta"/>
-        <mapping class="com.sjcontable.model.ContSubdivisionaria"/>
-        <mapping class="com.sjcontable.model.GloAperturaPeriodo"/>
-        <mapping class="com.sjcontable.model.GloConfiguracion"/>
-        <mapping class="com.sjcontable.model.GloEmpresa"/>
+        <mapping class="com.sjcontable.model.contable.ContCuenta"/>
+        <mapping class="com.sjcontable.model.contable.ContDivisionaria"/>
+        <mapping class="com.sjcontable.model.contable.ContElemento"/>
+        <mapping class="com.sjcontable.model.contable.ContSubCuenta"/>
+        <mapping class="com.sjcontable.model.contable.ContSubdivisionaria"/>
+        <mapping class="com.sjcontable.model.contable.GloAperturaPeriodo"/>
+        <mapping class="com.sjcontable.model.contable.GloConfiguracion"/>
+        <mapping class="com.sjcontable.model.contable.GloEmpresa"/>
+        <mapping class="com.sjcontable.model.contable.GloSucursal"/>
+        <mapping class="com.sjcontable.model.contable.ContMaestroCuentas"/>
 
     </session-factory>
    

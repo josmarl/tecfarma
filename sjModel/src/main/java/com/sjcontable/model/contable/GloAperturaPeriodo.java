@@ -6,7 +6,9 @@
 package com.sjcontable.model.contable;
 
 import java.io.Serializable;
+import java.util.Collection;
 import javax.persistence.Basic;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -14,6 +16,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -25,6 +28,8 @@ import javax.persistence.Table;
 @NamedQueries({
     @NamedQuery(name = "GloAperturaPeriodo.findAll", query = "SELECT g FROM GloAperturaPeriodo g")})
 public class GloAperturaPeriodo implements Serializable {
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idAperturaPeriodo")
+    private Collection<ContMaestroCuentas> contMaestroCuentasCollection;
     private static final long serialVersionUID = 1L;
     @Id
     @Basic(optional = false)
@@ -143,6 +148,14 @@ public class GloAperturaPeriodo implements Serializable {
     @Override
     public String toString() {
         return "com.sjcontable.model.GloAperturaPeriodo[ idAperturaPeriodo=" + idAperturaPeriodo + " ]";
+    }
+
+    public Collection<ContMaestroCuentas> getContMaestroCuentasCollection() {
+        return contMaestroCuentasCollection;
+    }
+
+    public void setContMaestroCuentasCollection(Collection<ContMaestroCuentas> contMaestroCuentasCollection) {
+        this.contMaestroCuentasCollection = contMaestroCuentasCollection;
     }
     
 }
