@@ -14,13 +14,15 @@
                         <HBox prefWidth="200.0">
                             <children>
                                 <AnchorPane maxWidth="621.0" minHeight="-Infinity" minWidth="1366.0" prefHeight="500.0" prefWidth="1366.0">
-                           <children>
-                              <TextField layoutX="580.0" layoutY="140.0" promptText="ingrese usuario..." />
-                              <Label layoutX="522.0" layoutY="144.0" text="Usuario:" />
-                              <Label layoutX="504.0" layoutY="219.0" text="Contraseña:" />
-                              <TextField layoutX="580.0" layoutY="215.0" />
-                              <Button layoutX="580.0" layoutY="279.0" mnemonicParsing="false" onAction="#handleLogin" text="Aceptar" />
-                           </children></AnchorPane>
+                                    <children>
+                                        <TextField layoutX="647.0" layoutY="147.0" promptText="ingrese usuario..." />
+                                        <Label layoutX="589.0" layoutY="151.0" text="Usuario:" />
+                                        <Label layoutX="571.0" layoutY="191.0" text="Contraseña:" />
+                                        <TextField layoutX="647.0" layoutY="187.0" promptText="Ingresar contraseña..." />
+                                        <Button layoutX="647.0" layoutY="225.0" mnemonicParsing="false" onAction="#handleLogin" text="Cancelar" />
+                                        <Button layoutX="582.0" layoutY="225.0" mnemonicParsing="false" onAction="#handleLogin" text="Ingresar" />
+                                    </children>
+                                </AnchorPane>
                             </children>
                             <VBox.margin>
                                 <Insets />

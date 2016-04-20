@@ -25,9 +25,4 @@ public class HeadController extends LocalAppController implements Initializable 
 
     }
 
-    @FXML
-    protected void goToMantMaestroCuentas(ActionEvent event) throws IOException {
-        openWindows(AppConstant.PAGE_MC_MANTENANCE);
-    }
-
 }
