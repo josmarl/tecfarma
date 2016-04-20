@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="26.0" prefWidth="1355.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tecfarma.view.controller.HeadController">
+    <children>
+        <MenuBar layoutX="7.0" layoutY="14.0" prefHeight="26.0" prefWidth="1355.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="Sistema">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Cerrar" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Transacciones">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Ventas" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Reportes">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Reporte de ventas" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Ayuda">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Acerca de" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </children>
+</AnchorPane>

@@ -1,0 +1,33 @@
+.popup_body{
+    -fx-background-color: #293e43;
+}
+.popup_btn{
+    -fx-font-family: "Calibri";
+    -fx-text-fill: #FFFFFF;
+    -fx-text-alignment: center;
+    -fx-background-color: #6a787b;
+    -fx-background-radius: 0px;
+    -fx-font-size: 17px;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+    -fx-pref-width: 140px;
+    -fx-pref-height: 50px; 
+    -fx-font-family: "Arial Narrow";
+}
+.popup_background{
+    -fx-background-color: #3a4d53;
+}
+.popup_text{
+    -fx-alignment: center;
+    -fx-font-family: "Centabel Book";
+    -fx-text-fill: #FFFFFF;
+}
+.popup_title{
+    -fx-font-size: 50px;
+}
+.popup_message{
+    -fx-font-family: "Calibri";
+    -fx-font-size: 30px;
+    
+}
+

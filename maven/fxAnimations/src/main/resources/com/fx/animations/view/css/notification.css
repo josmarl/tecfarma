@@ -1,0 +1,11 @@
+/*
+ * Empty Stylesheet file.
+ */
+.notification{
+    -fx-background-color: #FFFFFF;
+}
+.lblNotification{
+    -fx-text-fill: #B18B23;
+    -fx-font-size: 20px;
+    -fx-font-family: "Arial Narrow";    
+}

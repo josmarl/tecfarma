@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" minHeight="680.0" minWidth="1355.0" prefHeight="680.0" prefWidth="1355.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tecfarma.view.controller.DashboardController">
+   <children>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="1366.0">
+               <children>
+                  <HBox prefWidth="200.0">
+                     <children>
+                        <AnchorPane maxWidth="621.0" minHeight="-Infinity" minWidth="1366.0" prefHeight="500.0" prefWidth="1366.0">
+                           <children>
+                              <CheckBox layoutX="103.0" layoutY="108.0" mnemonicParsing="false" text="CheckBox" />
+                              <Button fx:id="btxxxx" layoutX="103.0" layoutY="137.0" mnemonicParsing="false" text="Button" />
+                           </children></AnchorPane>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <fx:include source="Head.fxml" />
+      <fx:include source="Footer.fxml" />
+   </children>
+</AnchorPane>

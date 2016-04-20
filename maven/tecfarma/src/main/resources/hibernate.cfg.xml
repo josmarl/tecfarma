@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/sj_contable_2016</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password"></property>
+
+        <mapping class="com.sjcontable.model.contable.ContCuenta"/>
+        <mapping class="com.sjcontable.model.contable.ContDivisionaria"/>
+        <mapping class="com.sjcontable.model.contable.ContElemento"/>
+        <mapping class="com.sjcontable.model.contable.ContSubCuenta"/>
+        <mapping class="com.sjcontable.model.contable.ContSubdivisionaria"/>
+        <mapping class="com.sjcontable.model.contable.GloAperturaPeriodo"/>
+        <mapping class="com.sjcontable.model.contable.GloConfiguracion"/>
+        <mapping class="com.sjcontable.model.contable.GloEmpresa"/>
+        <mapping class="com.sjcontable.model.contable.GloSucursal"/>
+        <mapping class="com.sjcontable.model.contable.ContMaestroCuentas"/>
+
+    </session-factory>
+   
+</hibernate-configuration>
+
