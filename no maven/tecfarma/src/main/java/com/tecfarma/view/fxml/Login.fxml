@@ -15,12 +15,12 @@
                             <children>
                                 <AnchorPane maxWidth="621.0" minHeight="-Infinity" minWidth="1366.0" prefHeight="500.0" prefWidth="1366.0">
                                     <children>
-                                        <TextField layoutX="647.0" layoutY="147.0" promptText="ingrese usuario..." />
-                                        <Label layoutX="589.0" layoutY="151.0" text="Usuario:" />
+                                        <TextField fx:id="txtUsuario" layoutX="647.0" layoutY="136.0" promptText="ingrese usuario..." styleClass="required" />
+                                        <Label layoutX="589.0" layoutY="136.0" text="Usuario:" />
                                         <Label layoutX="571.0" layoutY="191.0" text="Contraseña:" />
-                                        <TextField layoutX="647.0" layoutY="187.0" promptText="Ingresar contraseña..." />
-                                        <Button layoutX="647.0" layoutY="225.0" mnemonicParsing="false" onAction="#handleLogin" text="Cancelar" />
-                                        <Button layoutX="582.0" layoutY="225.0" mnemonicParsing="false" onAction="#handleLogin" text="Ingresar" />
+                                        <PasswordField fx:id="txtPassword" layoutX="647.0" layoutY="187.0" promptText="Ingresar contraseña..." styleClass="required" />
+                                        <Button layoutX="647.0" layoutY="225.0" mnemonicParsing="false" text="Cancelar" />
+                                        <Button fx:id="btnLogin" layoutX="582.0" layoutY="225.0" mnemonicParsing="false" onAction="#handleLogin" text="Ingresar" />
                                     </children>
                                 </AnchorPane>
                             </children>

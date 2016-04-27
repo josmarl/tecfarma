@@ -27,4 +27,9 @@ public class UsuarioService implements IUsuarioService {
         return factoryDao.getUsuarioDao().listaUsuario();
     }
 
+    @Override
+    public Usuario loginUsuario(Usuario usuario) {
+        return factoryDao.getUsuarioDao().loginUsuario(usuario);
+    }
+
 }

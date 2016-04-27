@@ -13,7 +13,7 @@
          <children>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="1355.0">
                <children>
-                  <Label text="Powered by Interestelar" />
+                  <Label text="Powered by SevDev" />
                </children>
             </VBox>
          </children>

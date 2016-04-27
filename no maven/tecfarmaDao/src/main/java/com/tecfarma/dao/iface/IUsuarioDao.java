@@ -15,5 +15,7 @@ import java.util.List;
 public interface IUsuarioDao {
 
     public List<Usuario> listaUsuario();
-    
+
+    public Usuario loginUsuario(Usuario usuario);
+
 }

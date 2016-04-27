@@ -66,7 +66,7 @@ public class ConnDatabase {
                 }
             }
 
-            Logger.getLogger(ConnDatabase.class.getName()).log(Level.SEVERE, DaoConstants.MSG_CONN_CLOSE_SUCESS);
+            Logger.getLogger(ConnDatabase.class.getName()).log(Level.INFO, DaoConstants.MSG_CONN_CLOSE_SUCESS);
 
         } catch (SQLException ex) {
             Logger.getLogger(ConnDatabase.class.getName()).log(Level.SEVERE, ex.getMessage(), ex);

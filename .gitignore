@@ -1,11 +1,11 @@
-/fxCommon/target/
-/fxAnimations/target/
-/helpUtil/target/
-/helpCryptoUtil/target/
-/helpGenericUtil/target/
-/tecfarmaModel/target/
-/tecfarmaDao/target/
-/tecfarma/target/
+/maven/fxCommon/target/
+/maven/fxAnimations/target/
+/maven/helpUtil/target/
+/maven/helpCryptoUtil/target/
+/maven/helpGenericUtil/target/
+/maven/tecfarmaModel/target/
+/maven/tecfarmaDao/target/
+/maven/tecfarma/target/
 /no maven/tecfarmaModel/nbproject/private/
 /no maven/tecfarmaDao/nbproject/private/
 /no maven/helpCryptoUtil/nbproject/private/

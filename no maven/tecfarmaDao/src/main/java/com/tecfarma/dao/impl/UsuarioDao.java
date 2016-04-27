@@ -45,4 +45,26 @@ public class UsuarioDao extends ConnDatabase implements IUsuarioDao {
         return lista;
     }
 
+    @Override
+    public Usuario loginUsuario(Usuario usuario) {
+        Usuario u = null;
+        try {
+            openConn();
+            ps = oConnection.prepareStatement("select usuario,estado from usuario where usuario=? and password=?;");
+            ps.setString(1, usuario.getUsuario());
+            ps.setString(2, usuario.getPassword());
+            rs = ps.executeQuery();
+            if (rs.next()) {
+                u = new Usuario();
+                u.setUsuario(rs.getString("usuario"));
+                u.setEstado(rs.getString("estado"));
+            }
+        } catch (Exception e) {
+            Logger.getLogger(UsuarioDao.class.getName()).log(Level.OFF, e.getMessage());
+        } finally {
+            closeConn();
+        }
+        return u;
+    }
+
 }
